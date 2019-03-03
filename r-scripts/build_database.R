@@ -1,6 +1,5 @@
 #dependencies
 library(lubridate)
-library(plyr)
 library(stringr)
 
 #contruct dataframe
