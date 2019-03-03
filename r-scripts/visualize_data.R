@@ -35,10 +35,14 @@ win.sum$win.pct <- win.sum$win / win.sum$tot
 wins.plot <- ggplot(win.sum, aes(x=year, y=win.pct)) + 
   geom_bar(stat="identity") +
   theme_dark() +
+<<<<<<< HEAD
   theme(axis.text.x = element_text(angle = 90)) +
   ggtitle(team) + 
   xlab(element_blank()) + 
   ylab(element_text("Win Percentage"))
+=======
+  theme(axis.text.x = element_text(angle = 90))
+>>>>>>> 1e86b7f39d60995f32aeca143ddfd2410ee4f026
 
 print(wins.plot)
 
@@ -58,6 +62,10 @@ gol.plot <- ggplot(gol.sum, aes(x=year, y=goals, fill=goal.group)) +
   ylab(element_text("Goals per game")) +
   guides(fill=guide_legend(title=NULL)) +
   scale_fill_manual(labels=c("Goals For", "Goals Against"), values=c("green", "red")) +
+<<<<<<< HEAD
   ggtitle(team)
+=======
+  ggtitle(str_c(team, " annual goal summary"))
+>>>>>>> 1e86b7f39d60995f32aeca143ddfd2410ee4f026
   
 print(gol.plot)
